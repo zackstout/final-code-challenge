@@ -3,7 +3,7 @@ var express = require('express');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
-var databaseUrl = 'mongodb://localhost:27017/realestate';
+var databaseUrl = 'mongodb://localhost:27017/messages';
 
 var MessageSchema = new Schema({name: String, message: String});
 var Message = mongoose.model('whateverThisStringDoesNothing', MessageSchema, 'messages');
