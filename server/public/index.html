@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Final Code Challenge!</title>
+    <script src="vendors/angular.min.js" charset="utf-8"></script>
+    <script src="scripts/client.js" charset="utf-8"></script>
+    <link rel="stylesheet" href="styles/style.css">
+  </head>
+  <body ng-app="app" ng-controller="MessageController as mc">
+    <h1>Let's see some messages!!</h1>
+
+    <form ng-submit="mc.addMessage(mc.newMessage)">
+      Name: <input type="text" placeholder="name" ng-model="mc.newMessage.name">
+      Message: <input type="text" placeholder="message" ng-model="mc.newMessage.message">
+      <input type="submit">
+    </form>
+    <br><br>
+
+    <div id="main" ng-repeat="message in mc.messages">
+      {{message.name}} says "{{message.message}}"!
+    </div>
+
+  </body>
+</html>
